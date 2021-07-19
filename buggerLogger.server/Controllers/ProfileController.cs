@@ -36,18 +36,18 @@ namespace buggerLogger.Controllers
       }
     }
 
-//     [HttpGet("{id}/vaults")]
-//     public ActionResult<IEnumerable<VaultKeepViewModel>> GetVaultByProfileId(string id)
-//     {
-//       try
-//       {
-//         return Ok(_vserv.GetByProfileId(id));
-//       }
-//       catch (Exception e)
-//       {
-//         return BadRequest(e.Message);
-//       }
-//     }
+    [HttpGet("{id}/bug")]
+    public ActionResult<IEnumerable<Bug>> GetBugByProfileId(string id)
+    {
+      try
+      {
+        return Ok(_bserv.GetBugByProfileId(id));
+      }
+      catch (Exception e)
+      {
+        return BadRequest(e.Message);
+      }
+    } 
 
 //     [HttpGet("{id}/keeps")]
 //     public ActionResult<IEnumerable<VaultKeepViewModel>> GetKeepByProfileId(string id)
